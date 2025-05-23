@@ -10,7 +10,7 @@ const app = express();
 app.use(cors({ origin: "http://localhost:5173" }));
 app.use(express.json());
 
-app.get("/health", (_req: Request, res: Response) => {
+app.get("/api/health", (_req: Request, res: Response) => {
   console.log("🚀 Servidor desplegado y funcionando correctamente en Vercel");
   res.json({ ok: true, message: "Servidor funcionando correctamente" });
 });
