@@ -7,7 +7,7 @@ export const AppDataSource = new DataSource({
   url: process.env.DATABASE_URL,
   synchronize: true,
   logging: false,
-  entities: [__dirname + '/../entities/*.{ts,js}'],
+  entities: [Book, Writer, process.cwd() + '/src/entities/*.{ts,js}'],
   migrations: [],
   subscribers: [],
 });
