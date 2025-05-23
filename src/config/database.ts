@@ -4,10 +4,10 @@ import { Book } from "../entities/Book.entity";
 
 export const AppDataSource = new DataSource({
   type: "postgres",
-  url: process.env.DATABASE_URL, // URL de conexión de Supabase (Postgres)
+  url: process.env.DATABASE_URL,
   synchronize: true,
   logging: false,
-  entities: [Writer, Book],
+  entities: [__dirname + '/../entities/*.{ts,js}'],
   migrations: [],
   subscribers: [],
 });
